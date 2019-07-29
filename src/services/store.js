@@ -10,7 +10,6 @@ export default {
   get: cnpj => {
     const companies = JSON.parse(localStorage.getItem('companies'));
     const company = companies.find(item => item.cnpj.replace(/\D/g, '') === cnpj);
-    console.log(company);
     return company;
   },
 

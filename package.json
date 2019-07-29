@@ -16,7 +16,9 @@
     "core-js": "^2.6.5",
     "vue": "^2.6.10",
     "vue-carousel": "^0.18.0",
-    "vue-router": "^3.0.7"
+    "vue-owl-carousel": "^2.0.3",
+    "vue-router": "^3.0.7",
+    "vue-slick": "^1.1.15"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.9.0",

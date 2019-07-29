@@ -8,6 +8,8 @@ module.exports = {
         // so this assumes you have a file named `src/variables.scss`
         data: `
           @import "@/assets/stylesheets/_variables.scss"
+          @import "@/assets/stylesheets/owl/owl.carousel.scss"
+          @import "@/assets/stylesheets/owl/owl.theme.default.scss"
           `,
       },
     },

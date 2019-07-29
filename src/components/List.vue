@@ -2,8 +2,14 @@
   <section>
     <div class="container">
       <blank-state v-if="!companies.length"></blank-state>
-      <carousel class="list" :navigationEnabled="true" :perPageCustom="[[768, 3], [1024, 4]]">
-        <slide v-for="company in companies" :key="company.cnpj">
+      <carousel
+        class="list"
+        :navigationEnabled="true"
+        :perPage="4"
+        :navigation-next-label="navigationNext"
+        :navigation-prev-label="navigationPrev"
+      >
+        <slide v-for="(company, index) in companies" :key="index" @slideclick="handleSlideClick()">
           <company-card :company="company" />
         </slide>
       </carousel>
@@ -12,33 +18,45 @@
 </template>
 
 <script>
+import { Carousel, Slide } from 'vue-carousel';
 import BlankState from './BlankState.vue';
 import CompanyCard from './CompanyCard.vue';
-import { Carousel, Slide } from 'vue-carousel';
 
 export default {
   name: 'List',
   props: ['companies', 'loading'],
+  computed: {
+    navigationNext() {
+      return `<span style="font-size: 48px; color: white">></span>`;
+    },
+    navigationPrev() {
+      return `<span style="font-size: 48px; color: white"><</span>`;
+    },
+  },
   components: {
     Carousel,
     Slide,
     BlankState,
     CompanyCard,
   },
+  methods: {
+    handleSlideClick(dataset) {
+      console.log(dataset);
+    },
+  },
 };
 </script>
 
-<style lang="sass" scoped>
+<style lang="sass">
     section
       height: calc(100vh - 235px)
       background: $gradient
+
       .container
         .blank-state
           padding-top: 130px
           text-align: center
         .list
           padding-top: 130px
-          .card
-            margin-left: 15px
-            margin-right: 15px
+
 </style>
