@@ -13,12 +13,15 @@
     "@fortawesome/vue-fontawesome": "^0.1.6",
     "axios": "^0.19.0",
     "bootstrap": "^4.3.1",
+    "cnpj": "^2.0.1",
     "core-js": "^2.6.5",
+    "cpf-cnpj-validator": "^0.1.0",
     "vue": "^2.6.10",
     "vue-carousel": "^0.18.0",
     "vue-owl-carousel": "^2.0.3",
     "vue-router": "^3.0.7",
-    "vue-slick": "^1.1.15"
+    "vue-slick": "^1.1.15",
+    "vue-the-mask": "^0.11.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.9.0",

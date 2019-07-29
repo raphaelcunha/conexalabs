@@ -1,9 +1,9 @@
 <template>
   <div>
     <Header>
-      <Search :search="search"></Search>
+      <Search :search="search" :loading="loading"></Search>
     </Header>
-    <List :companies="list" :loading="loading"></List>
+    <List :companies="list" ></List>
   </div>
 </template>
 
@@ -27,15 +27,17 @@ export default {
     Search,
     List,
   },
-  async mounted() {
+  mounted() {
     this.list = store.all();
   },
+
   methods: {
-    async search(submitEvent) {
-      submitEvent.preventDefault();
-      const cnpj = submitEvent.target.elements.cnpj.value;
-      const result = await api.get(cnpj.replace(/\D/g, ''));
+    async search({ cnpj }) {
+      this.loading = true;
+      const result = await api.get(cnpj);
       store.set(result.data);
+      this.list = store.all();
+      this.loading = false;
     },
   },
 };

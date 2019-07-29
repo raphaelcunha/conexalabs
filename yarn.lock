@@ -709,7 +709,7 @@
   resolved "https://registry.yarnpkg.com/@hapi/hoek/-/hoek-8.1.0.tgz#8f7627b23ed9bf67088fc7f9669e48c63ad421bd"
   integrity sha512-b1J4jxYnW+n6lC91V6Pqg9imP9BZq0HNCeM+3sbXg05rQsE9cGYrKFpZjyztVesGmNRE6R+QaEoWGATeIiUVjA==
 
-"@hapi/joi@^15.0.1":
+"@hapi/joi@^15.0.1", "@hapi/joi@^15.1.0":
   version "15.1.0"
   resolved "https://registry.yarnpkg.com/@hapi/joi/-/joi-15.1.0.tgz#940cb749b5c55c26ab3b34ce362e82b6162c8e7a"
   integrity sha512-n6kaRQO8S+kepUTbXL9O/UOL788Odqs38/VOfoCrATDtTvyfiO3fgjlSRaNkHabpTLgM7qru9ifqXlXbXk8SeQ==
@@ -2225,6 +2225,11 @@ clone@^1.0.2:
   resolved "https://registry.yarnpkg.com/clone/-/clone-1.0.4.tgz#da309cc263df15994c688ca902179ca3c7cd7c7e"
   integrity sha1-2jCcwmPfFZlMaIypAheco8fNfH4=
 
+cnpj@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/cnpj/-/cnpj-2.0.1.tgz#4db7ad88165da3521f78b6e5cb50c283c80b7599"
+  integrity sha512-kbmtHMHbfvLvHohQpkG+FYjaGOYPgiGxxqZa6Ya4a4KlGoYVdqXUt1BHn7Mlj/M+86MIHwlgVh4KTyIkYOzEEQ==
+
 co@^4.6.0:
   version "4.6.0"
   resolved "https://registry.yarnpkg.com/co/-/co-4.6.0.tgz#6ea6bdf3d853ae54ccb8e47bfa0bf3f9031fb184"
@@ -2470,6 +2475,13 @@ cosmiconfig@^5.0.0:
     is-directory "^0.3.1"
     js-yaml "^3.13.1"
     parse-json "^4.0.0"
+
+cpf-cnpj-validator@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/cpf-cnpj-validator/-/cpf-cnpj-validator-0.1.0.tgz#834aebac2b4afd8b6f4081adb01a4cc28444890b"
+  integrity sha512-tq2UOQIb39v+0G8geTZG1cPNiySD/as8ZQGWCoTUpS8K8gxXFku5DQAz+UZLGs1Kj3RktSSt/1+SvN3PCG8Wbw==
+  dependencies:
+    "@hapi/joi" "^15.1.0"
 
 create-ecdh@^4.0.0:
   version "4.0.3"
@@ -8743,6 +8755,11 @@ vue-template-es2015-compiler@^1.9.0:
   version "1.9.1"
   resolved "https://registry.yarnpkg.com/vue-template-es2015-compiler/-/vue-template-es2015-compiler-1.9.1.tgz#1ee3bc9a16ecbf5118be334bb15f9c46f82f5825"
   integrity sha512-4gDntzrifFnCEvyoO8PqyJDmguXgVPxKiIxrBKjIowvL9l+N66196+72XVYR8BBf1Uv1Fgt3bGevJ+sEmxfZzw==
+
+vue-the-mask@^0.11.1:
+  version "0.11.1"
+  resolved "https://registry.yarnpkg.com/vue-the-mask/-/vue-the-mask-0.11.1.tgz#91ee01008354ae57bccc79bb61b65f32d971d9d5"
+  integrity sha512-UquSfnSWejD0zAfcD+3jJ1chUAkOAyoxya9Lxh9acCRtrlmGcAIvd0cQYraWqKenbuZJUdum+S174atv2AuEHQ==
 
 vue@^2.5.17, vue@^2.6.10:
   version "2.6.10"
