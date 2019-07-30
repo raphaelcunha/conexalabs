@@ -33,6 +33,11 @@ Vue.use(Geocoder, {
 });
 
 new Vue({
-  router: new VueRouter({ mode: 'history', routes }),
+  router: new VueRouter({
+    mode: 'history',
+    history: true,
+    hashbang: false,
+    routes,
+  }),
   render: h => h(App),
 }).$mount('#app');
