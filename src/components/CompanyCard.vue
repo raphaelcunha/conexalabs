@@ -5,15 +5,15 @@
     </div>
     <ul>
       <li class="name">
-        <div class="title">{{ company.nome }}</div>
+        <div class="title">{{ company.nome || '' }}</div>
         <div class="subtitle">Razão Social</div>
       </li>
       <li class="cnpj">
-        <div class="title">{{ company.cnpj }}</div>
+        <div class="title">{{ company.cnpj || '' }}</div>
         <div class="subtitle">CNPJ</div>
       </li>
       <li class="endereco">
-        <div class="title">{{ company.bairro }}</div>
+        <div class="title">{{ company.bairro || '' }}</div>
         <div class="subtitle">Endereço</div>
       </li>
     </ul>
@@ -49,10 +49,10 @@ export default {
         list-style: none
         li
           margin-bottom: 25px
-          color: $color-secondary
+          color: $color
           .title
             font-size: 16px
-            font-weight: 600
+            font-weight: 700
           .subtitle
             font-size: 16px
 

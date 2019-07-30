@@ -38,7 +38,6 @@ export default {
   },
   mounted() {
     this.company = store.get(this.$route.params.cnpj);
-
     const addressObj = {
       address_line_1: `${this.company.nome} ${this.company.bairro} ${this.company.complemento}`,
       city: this.company.municipio,

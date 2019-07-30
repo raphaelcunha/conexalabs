@@ -66,7 +66,7 @@ export default {
           margin: 0 auto
           padding-top: 130px
           .box
-            padding: 0 15px
+            padding: 0 10px
           .card
             cursor: pointer
 

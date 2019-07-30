@@ -33,11 +33,25 @@ export default {
 
   methods: {
     async search({ cnpj }) {
-      this.loading = true;
-      const result = await api.get(cnpj);
-      store.set(result.data);
-      this.list = store.all();
-      this.loading = false;
+      try {
+        this.loading = true;
+        const result = await api.get(cnpj);
+        store.set(result.data);
+        this.list = store.all();
+        this.$toasted.show('Cadastrado com sucesso o CNPJ!', {
+          theme: 'outline',
+          type: 'success',
+          duration: 5000,
+        });
+      } catch (e) {
+        this.$toasted.show('Ocorreu algum error ao buscar o CNPJ', {
+          theme: 'outline',
+          type: 'error',
+          duration: 5000,
+        });
+      } finally {
+        this.loading = false;
+      }
     },
   },
 };

@@ -15,4 +15,8 @@
   .VueCarousel-pagination
     visibility: hidden
 
+  .toasted-container.top-right
+    top: 0
+    right: 10px
+
 </style>
