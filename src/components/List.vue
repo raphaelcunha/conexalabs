@@ -9,7 +9,11 @@
         :navigation-next-label="navigationNext"
         :navigation-prev-label="navigationPrev"
       >
-        <slide v-for="(company, index) in companies" :key="index" @slideclick="handleSlideClick()">
+        <slide
+          v-for="(company, index) in companies"
+          :key="index"
+          @slideclick="handleSlideClick(company)"
+        >
           <company-card :company="company" />
         </slide>
       </carousel>
@@ -40,8 +44,8 @@ export default {
     CompanyCard,
   },
   methods: {
-    handleSlideClick(dataset) {
-      console.log(dataset);
+    handleSlideClick(company) {
+      this.$router.push({ path: `/maps/${company.cnpj.replace(/\D/g, '')}` });
     },
   },
 };
@@ -51,12 +55,13 @@ export default {
     section
       height: calc(100vh - 235px)
       background: $gradient
-
       .container
         .blank-state
           padding-top: 130px
           text-align: center
         .list
           padding-top: 130px
+          .card
+            cursor: pointer
 
 </style>

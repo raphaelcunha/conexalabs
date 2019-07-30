@@ -3,7 +3,7 @@
     <Header>
       <Search :search="search" :loading="loading"></Search>
     </Header>
-    <List :companies="list" ></List>
+    <List :companies="list"></List>
   </div>
 </template>
 
