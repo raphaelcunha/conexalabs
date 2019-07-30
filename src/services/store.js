@@ -1,8 +1,8 @@
 export default {
-  set: item => {
+  set: company => {
     let companies = JSON.parse(localStorage.getItem('companies'));
     if (companies === null) companies = [];
-    companies.push(item);
+    companies.push(company);
     localStorage.setItem('companies', JSON.stringify(companies));
     return companies;
   },

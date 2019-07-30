@@ -17,7 +17,8 @@ Vue.component('font-awesome-icon', FontAwesomeIcon);
 Vue.config.productionTip = false;
 
 Vue.use(VueRouter);
-Vue.use(Toasted);
+
+Vue.use(Toasted, { theme: 'outline', duration: 5000 });
 
 Vue.use(VueGoogleMaps, {
   load: {
@@ -25,6 +26,7 @@ Vue.use(VueGoogleMaps, {
     libraries: 'places',
   },
 });
+
 Vue.use(Geocoder, {
   defaultMode: 'address',
   googleMapsApiKey: process.env.VUE_APP_GOOGLEMAPS,
