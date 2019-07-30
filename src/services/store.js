@@ -8,7 +8,8 @@ export default {
   },
 
   get: cnpj => {
-    const companies = JSON.parse(localStorage.getItem('companies'));
+    let companies = JSON.parse(localStorage.getItem('companies'));
+    if (companies === null) companies = [];
     const company = companies.find(item => item.cnpj.replace(/\D/g, '') === cnpj);
     return company;
   },
