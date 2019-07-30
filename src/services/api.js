@@ -1,12 +1,11 @@
 import axios from 'axios';
+import jsonpAdapter from 'axios-jsonp';
 
-const baseURL =
-  process.env.NODE_ENV === 'development'
-    ? 'https://cors-anywhere.herokuapp.com/https://www.receitaws.com.br/v1/cnpj/'
-    : 'https://www.receitaws.com.br/v1/cnpj/';
+const baseURL = 'https://www.receitaws.com.br/v1/cnpj/';
 
 const api = axios.create({
   baseURL,
+  adapter: jsonpAdapter,
   timeout: 5000,
 });
 
