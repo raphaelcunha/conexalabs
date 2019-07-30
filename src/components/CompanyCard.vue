@@ -1,5 +1,5 @@
 <template>
-  <div class="card">
+  <div class="card" v-if="company">
     <div class="button-back" v-if="buttonBack" @click="back">
       <img width="45" src="@/assets/images/icon-arrow-left.png" />
     </div>

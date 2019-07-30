@@ -1,5 +1,5 @@
 <template>
-  <div class="map">
+  <div class="map" v-if="company && center">
     <company-card :company="company" button-back="true" />
     <GmapMap
       :options="{
@@ -15,12 +15,13 @@
       :zoom="15"
       class="googleMaps"
     >
-      <GmapMarker :position="marker" />
+      <GmapMarker :position="google && new google.maps.LatLng(center.lat, center.lng)" />
     </GmapMap>
   </div>
 </template>
 
 <script>
+import { gmapApi } from 'vue2-google-maps';
 import store from '../services/store';
 import CompanyCard from '../components/CompanyCard.vue';
 
@@ -29,9 +30,11 @@ export default {
   data() {
     return {
       company: null,
-      center: {},
-      marker: {},
+      center: { lat: -15.7941, long: -47.8825 },
     };
+  },
+  computed: {
+    google: gmapApi,
   },
   components: {
     CompanyCard,
@@ -47,8 +50,7 @@ export default {
     this.$geocoder.send(addressObj, response => {
       if (response.results) {
         const { lat, lng } = response.results[0].geometry.location;
-        this.center = { lat, lng };
-        this.marker = { lat, lng };
+        this.center = { lat: parseFloat(lat), lng: parseFloat(lng) };
       }
     });
   },
