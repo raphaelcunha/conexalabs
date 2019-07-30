@@ -19,14 +19,14 @@ Vue.use(VueRouter);
 
 Vue.use(VueGoogleMaps, {
   load: {
-    key: 'AIzaSyBKshoYfZ-pj534HVfwDw5mKIKorpuW0pg',
+    key: process.env.VUE_APP_GOOGLEMAPS,
     libraries: 'places',
   },
 });
 
 Vue.use(Geocoder, {
   defaultMode: 'address',
-  googleMapsApiKey: 'AIzaSyBKshoYfZ-pj534HVfwDw5mKIKorpuW0pg',
+  googleMapsApiKey: process.env.VUE_APP_GOOGLEMAPS,
 });
 
 new Vue({
