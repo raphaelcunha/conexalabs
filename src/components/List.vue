@@ -1,13 +1,13 @@
 <template>
   <section>
     <div class="container">
-      <blank-state v-if="!companies.length"></blank-state>
+      <blank-state v-if="!companies"></blank-state>
       <carousel
+        v-if="companies && companies.length"
         class="list col-sm-10 col-md-10 col-lg-12"
         :navigationEnabled="true"
         :navigation-next-label="navigationNext"
         :navigation-prev-label="navigationPrev"
-        :spacePadding="15"
         :perPageCustom="[[320, 1], [425, 1], [768, 2], [1024, 3], [1440, 4]]"
       >
         <slide

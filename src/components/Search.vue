@@ -16,8 +16,8 @@
           </div>
         </div>
         <div class="col-lg-3 col-md-4 col-sm-12">
-          <button type="submit" v-if="!loading">Localizar</button>
-          <button type="text" v-if="loading">
+          <button id="submit" type="submit" v-if="!loading">Localizar</button>
+          <button type="text" v-if="loading" disa>
             <img width="25" src="@/assets/images/loading.svg" />
           </button>
         </div>
@@ -34,6 +34,7 @@ export default {
   name: 'Search',
   data: () => ({
     errors: {},
+    teste: '123',
     cnpj: '',
   }),
   props: ['search', 'loading'],

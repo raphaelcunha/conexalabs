@@ -21,7 +21,7 @@ export default {
     background: #f6f6f6
     padding-top: 35px
     @media (max-width: $mobile)
-      height: 330px
+      height: 360px
     h1
       color: $color
       font-size: $font-size-title

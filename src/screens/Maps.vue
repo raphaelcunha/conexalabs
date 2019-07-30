@@ -1,6 +1,6 @@
 <template>
   <div class="map">
-    <company-card :company="company" />
+    <company-card :company="company" button-back="true" />
     <GmapMap
       :options="{
       zoomControl: false,
@@ -64,10 +64,9 @@ export default {
       z-index: 1
       background: white
       position: absolute
-      top: 0
-      left: 0
+      top: -5px
+      left: -5px
       width: 300px
-      height: 300px
     .googleMaps
       width: 100wh
       height: 100vh
