@@ -39,7 +39,6 @@ export default {
 
       try {
         this.loading = true;
-        console.log(store.get(cnpj));
         if (store.get(cnpj)) {
           notification('CNPJ já cadastrado', 'warning');
         } else {
@@ -49,7 +48,6 @@ export default {
           notification('Cadastrado com sucesso o CNPJ', 'success');
         }
       } catch (e) {
-        console.log(e);
         notification('Ocorreu algum error ao buscar o CNPJ', 'error');
       } finally {
         this.loading = false;
