@@ -1,21 +1,19 @@
 <template>
-  <div class="slide">
-    <div class="card">
-      <ul>
-        <li>
-          <div class="title">{{ company.nome }}</div>
-          <div class="subtitle">Razão Social</div>
-        </li>
-        <li>
-          <div class="title">{{ company.cnpj }}</div>
-          <div class="subtitle">CNPJ</div>
-        </li>
-        <li>
-          <div class="title">{{ company.bairro }}</div>
-          <div class="subtitle">Endereço</div>
-        </li>
-      </ul>
-    </div>
+  <div class="card">
+    <ul>
+      <li>
+        <div class="title">{{ company.nome }}</div>
+        <div class="subtitle">Razão Social</div>
+      </li>
+      <li>
+        <div class="title">{{ company.cnpj }}</div>
+        <div class="subtitle">CNPJ</div>
+      </li>
+      <li>
+        <div class="title">{{ company.bairro }}</div>
+        <div class="subtitle">Endereço</div>
+      </li>
+    </ul>
   </div>
 </template>
 
@@ -27,8 +25,6 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-  .slide
-    padding: 0 15px
     .card
       color: $color
       border-radius: 15px

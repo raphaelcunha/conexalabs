@@ -2,7 +2,7 @@
   <div class="search">
     <form @submit.prevent="submit">
       <div class="row justify-content-md-center">
-        <div class="col-md-4">
+        <div class="col-lg-4 col-md-6 col-sm-12">
           <input
             type="text"
             autofocus
@@ -15,7 +15,7 @@
             <span>{{ errors.message }}</span>
           </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-lg-3 col-md-4 col-sm-12">
           <button type="submit" v-if="!loading">Localizar</button>
           <button type="text" v-if="loading">
             <img width="25" src="@/assets/images/loading.svg" />
@@ -53,7 +53,6 @@ export default {
 
 <style lang="sass" scoped>
 
-
   .errors
     text-align: left
     span
@@ -71,6 +70,8 @@ export default {
     &::placeholder
       color: $color-placeholder
       opacity: 1
+    @media (max-width: $mobile)
+      width: 80%
 
   button
     text-transform: uppercase
@@ -81,5 +82,8 @@ export default {
     font-size: 18px
     background: $color
     border-radius: 25px
+    @media (max-width: $mobile)
+      width: 80%
+      margin-top: 25px
 
 </style>

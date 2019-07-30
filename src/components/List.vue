@@ -3,18 +3,21 @@
     <div class="container">
       <blank-state v-if="!companies.length"></blank-state>
       <carousel
-        class="list"
+        class="list col-sm-10 col-md-10 col-lg-12"
         :navigationEnabled="true"
-        :perPage="4"
         :navigation-next-label="navigationNext"
         :navigation-prev-label="navigationPrev"
+        :spacePadding="15"
+        :perPageCustom="[[320, 1], [425, 1], [768, 2], [1024, 3], [1440, 4]]"
       >
         <slide
           v-for="(company, index) in companies"
           :key="index"
           @slideclick="handleSlideClick(company)"
         >
-          <company-card :company="company" />
+          <div class="box">
+            <company-card :company="company" />
+          </div>
         </slide>
       </carousel>
     </div>
@@ -31,10 +34,10 @@ export default {
   props: ['companies', 'loading'],
   computed: {
     navigationNext() {
-      return `<span style="font-size: 48px; color: white">></span>`;
+      return `<span style="font-size: 48px; color: white; margin-left: -20px">></span>`;
     },
     navigationPrev() {
-      return `<span style="font-size: 48px; color: white"><</span>`;
+      return `<span style="font-size: 48px; color: white;  margin-right: -20px"><</span>`;
     },
   },
   components: {
@@ -60,7 +63,10 @@ export default {
           padding-top: 130px
           text-align: center
         .list
+          margin: 0 auto
           padding-top: 130px
+          .box
+            padding: 0 15px
           .card
             cursor: pointer
 

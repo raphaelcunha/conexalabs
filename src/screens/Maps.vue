@@ -1,6 +1,6 @@
 <template>
   <div class="map">
-    <div class="box">asdasdasdas</div>
+    <company-card :company="company" />
     <GmapMap
       :options="{
       zoomControl: false,
@@ -22,24 +22,28 @@
 
 <script>
 import store from '../services/store';
+import CompanyCard from '../components/CompanyCard.vue';
 
 export default {
   name: 'Map',
   data() {
     return {
+      company: null,
       center: {},
       marker: {},
-      lat: null,
-      lng: null,
     };
   },
+  components: {
+    CompanyCard,
+  },
   mounted() {
-    const company = store.get(this.$route.params.cnpj);
+    this.company = store.get(this.$route.params.cnpj);
+
     const addressObj = {
-      address_line_1: `${company.nome} ${company.bairro} ${company.complemento}`,
-      city: company.municipio,
-      state: company.uf,
-      zip_code: company.cep,
+      address_line_1: `${this.company.nome} ${this.company.bairro} ${this.company.complemento}`,
+      city: this.company.municipio,
+      state: this.company.uf,
+      zip_code: this.company.cep,
     };
     this.$geocoder.send(addressObj, response => {
       if (response.results) {
@@ -56,7 +60,7 @@ export default {
   .map
     width: 100wh
     height: 100vh
-    .box
+    .card
       z-index: 1
       background: white
       position: absolute

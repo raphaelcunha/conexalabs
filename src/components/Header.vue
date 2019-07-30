@@ -20,6 +20,8 @@ export default {
     height: 235px
     background: #f6f6f6
     padding-top: 35px
+    @media (max-width: $mobile)
+      height: 330px
     h1
       color: $color
       font-size: $font-size-title
@@ -29,4 +31,20 @@ export default {
       svg
         width: 25px
         margin-right: 25px
+
+      @media (max-width: $mobile)
+        font-size: $font-size-title / 1.8
+        text-align: center
+        svg
+          display: block
+          margin-bottom: 15px
+          width: 100% !important
+      @media (min-width: $tablet)
+        font-size: $font-size-title / 1.2
+      @media (min-width: $desktop)
+        font-size: $font-size-title
+      @media (min-width: $widscreen)
+        font-size: $font-size-title
+
+
 </style>
