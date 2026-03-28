@@ -4,20 +4,41 @@
   </div>
 </template>
 
+<style lang="scss">
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-<style lang="sass">
-  @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap')
+html {
+  scroll-behavior: smooth;
+}
 
-  body
-    font-family: 'Roboto', 'Tahoma', sans-serif
+body {
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  color: $claro-gray-dark;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
-  .VueCarousel-pagination
-    visibility: hidden
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
-  .toasted-container
-    .top-right
-      top: 0
-      right: 10px
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
 </style>

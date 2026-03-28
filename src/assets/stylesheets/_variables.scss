@@ -2,19 +2,46 @@
 $mobile: 767px;
 $tablet: 768px;
 $desktop: 992px;
-$widscreen: 1200px;
+$widescreen: 1200px;
 
-//variables
-$font-size: 20px;
-$font-size-title: 60px;
+// Claro brand colors
+$claro-red: #da291c;
+$claro-red-dark: #b71c1c;
+$claro-red-light: #ff5252;
+$claro-dark: #1a1a2e;
+$claro-dark-secondary: #16213e;
+$claro-gray: #f5f5f5;
+$claro-gray-dark: #333333;
+$claro-white: #ffffff;
+$claro-yellow: #ffc107;
+
+// typography
+$font-size: 16px;
+$font-size-sm: 14px;
+$font-size-lg: 18px;
+$font-size-xl: 24px;
+$font-size-title: 48px;
+$font-size-subtitle: 32px;
 $font-size-card: 16px;
-$color: #3a886f;
-$color-secondary: #0e9995;
-$color-placeholder: #a5a3a3;
-$gradient: linear-gradient(
-  90deg,
-  rgba(56, 134, 105, 1) 0%,
-  rgba(69, 154, 158, 1) 100%,
-  rgba(0, 212, 255, 1) 388%,
-  rgba(2, 0, 36, 1) 388%
-);
+
+// gradients
+$gradient-red: linear-gradient(135deg, $claro-red 0%, $claro-red-dark 100%);
+$gradient-dark: linear-gradient(135deg, $claro-dark 0%, $claro-dark-secondary 100%);
+$gradient-hero: linear-gradient(135deg, $claro-dark 0%, $claro-dark-secondary 50%, $claro-red-dark 100%);
+
+// shadows
+$shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
+$shadow-md: 0 4px 16px rgba(0, 0, 0, 0.12);
+$shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.15);
+$shadow-card: 0 4px 20px rgba(0, 0, 0, 0.08);
+
+// border radius
+$radius-sm: 8px;
+$radius-md: 12px;
+$radius-lg: 16px;
+$radius-xl: 24px;
+
+// transitions
+$transition-fast: 0.2s ease;
+$transition-normal: 0.3s ease;
+$transition-slow: 0.5s ease;
